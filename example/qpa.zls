@@ -1,0 +1,9 @@
+let hybrid metro(t_min, t_max) = c where
+  rec timer t init 0 reset c(_) -> 0
+  and emit c when {t >= t_min}
+  and always {t <= t_max}
+
+let hybrid archi(t_min, t_max) = c1, c2 where
+  rec c1 = metro(t_min, t_max)
+  and c2 = metro(t_min, t_max)
+  and timer t init 0
