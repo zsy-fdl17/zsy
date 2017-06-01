@@ -2,7 +2,7 @@
 
 This distribution includes the Zélus compiler extended to compile Zsy
 programs, runtime libraries, and example source code. The OCaml
-runtime (ocamlrun) is required to transform Zélus programs into
+runtime (ocamlrun) is required to transform ZSy programs into
 imperative code. The OCaml compiler is required to compile imperative
 code into executables.
 
@@ -28,7 +28,7 @@ Zélus can then be installed by running:
 sudo make install
 ```
 
-An option `-symb <main_node>` allows to compile Zsy programs.
+There is an option `-symb <main_node>` to compile Zsy programs.
 An example of a Zsy program is given in `examples/symb_qpa`.
 
 ## Example
