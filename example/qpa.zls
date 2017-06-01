@@ -6,4 +6,3 @@ let hybrid metro(t_min, t_max) = c where
 let hybrid archi(t_min, t_max) = c1, c2 where
   rec c1 = metro(t_min, t_max)
   and c2 = metro(t_min, t_max)
-  and timer t init 0
