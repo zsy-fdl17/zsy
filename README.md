@@ -29,7 +29,7 @@ sudo make install
 ```
 
 There is an option `-symb <main_node>` to compile Zsy programs.
-An example of a Zsy program is given in `examples/symb_qpa`.
+An example of a Zsy program is given in `example`.
 
 ## Example
 
