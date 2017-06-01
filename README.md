@@ -34,7 +34,7 @@ An example of a Zsy program is given in `examples/symb_qpa`.
 ## Example
 
 An example of a Zsy program simulating a simple two-node architecture
-can be found in `example/qpa.zls`. To build the example run:
+can be found in `example/qpa.zls`. To build and run the example run:
 
 ```
 make example
