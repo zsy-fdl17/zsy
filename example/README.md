@@ -7,7 +7,7 @@ architecture where each node is triggered by its own jittery clock.
 let hybrid clock(t_min, t_max) = c where
   rec timer t init 0 reset c -> 0
   and emit c when { t >= t_min }
-  and always {t <= t_max}
+  and always { t <= t_max }
 
 let hybrid scheduler(t_min, t_max) = c1, c2 where
   rec c1 = clock(t_min, t_max)

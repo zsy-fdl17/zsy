@@ -1,4 +1,4 @@
-# Zsy: A Dataflow Synchronous Programs with Timers
+# Zsy: A Synchronous Language with Timers
 
 This distribution includes the Zélus compiler extended to compile Zsy
 programs, runtime libraries, and example source code. The OCaml
