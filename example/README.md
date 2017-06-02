@@ -1,6 +1,6 @@
 # A simple two-node architecture
 
-File `qpa.zls` contains the compiled code of a simple two-node
+File `qpa.zls` contains ZSy source code of a simple two-node
 architecture where each node is triggered by its own jittery clock.
 
 ```
@@ -14,7 +14,7 @@ let hybrid scheduler(t_min, t_max) = c1, c2 where
   and c2 = clock(t_min, t_max)
 ```
 
-To build and start the symbolic simulation, type the following
+To compile and run the symbolic simulation, type the following
 command:
 
 ```
