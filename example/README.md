@@ -4,14 +4,14 @@ File `qpa.zls` contains the compiled code of a simple two-node
 architecture where each node is triggered by its own jittery clock.
 
 ```
-let hybrid metro(t_min, t_max) = c where
+let hybrid clock(t_min, t_max) = c where
   rec timer t init 0 reset c -> 0
   and emit c when { t >= t_min }
   and always {t <= t_max}
 
-let hybrid archi(t_min, t_max) = c1, c2 where
-  rec c1 = metro(t_min, t_max)
-  and c2 = metro(t_min, t_max)
+let hybrid scheduler(t_min, t_max) = c1, c2 where
+  rec c1 = clock(t_min, t_max)
+  and c2 = clock(t_min, t_max)
 ```
 
 To build and start the symbolic simulation, type the following
