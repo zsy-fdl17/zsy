@@ -5,13 +5,13 @@ all: qpa_symb.cmo qpa_run.cmo qpa_main.cmo
 	$(OCAMLC) $(OCAMLFLAGS) -o qpa.byte $(INCLUDES) \
 	    graphics.cma -I $(ZLLIB) $(ZLSTDLIBS) $(ZLEXTRALIBS) $^
 
-qpa_symb.ml archi.zls: qpa.zls
-	$(ZELUC) -symb archi qpa.zls
+qpa_symb.ml scheduler.zls: qpa.zls
+	$(ZELUC) -symb scheduler qpa.zls
 	$(ZELUC) qpa_symb.zls
 
-qpa_run.zls: qpa.zls archi.zls runtime.zls
-	$(ZELUC) archi.zls
-	cat archi.zls runtime.zls > qpa_run.zls
+qpa_run.zls: qpa.zls scheduler.zls runtime.zls
+	$(ZELUC) scheduler.zls
+	cat scheduler.zls runtime.zls > qpa_run.zls
 	$(ZELUC) qpa_run.zls
 
 qpa_main.cmo: INCLUDE += $(SUNDIALS)
@@ -22,7 +22,7 @@ qpa_run.ml qpa_main.ml: qpa_run.zls
 
 clean:
 	-@rm -f qpa_symb.*
-	-@rm -f archi.*
+	-@rm -f scheduler.*
 	-@rm -f qpa_run.*
 	-@rm -f qpa_main.*
 	-@rm -f *~ *.zci *.cm*

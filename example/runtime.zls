@@ -14,7 +14,7 @@ let node main_symb(choice) = zc, bw, bc1, bc2 where
   rec c1 = choice=C1 or choice=C1C2
   and c2 = choice=C2 or choice=C1C2
   and wait = choice = Wait
-  and (_, _), bv, bw,  zc = archi(wait, (c1, c2), (b_min, b_max))
+  and (_, _), bv, bw,  zc = scheduler(wait, (c1, c2), (b_min, b_max))
   and bc1 = nth(bv, 0)
   and bc2 = nth(bv, 1)
 
